@@ -25,6 +25,7 @@ import mozilla_repo_urls
                 "repo": "mozilla-central",
                 "repo_type": "hg",
                 "resource": "hg.mozilla.org",
+                "taskcluster_role_prefix": "repo:hg.mozilla.org/mozilla-central",
                 "urls": {
                     "https": "https://hg.mozilla.org/mozilla-central",
                     "ssh": "ssh://hg.mozilla.org/mozilla-central",
@@ -52,6 +53,7 @@ import mozilla_repo_urls
                 "repo": "releases/mozilla-beta",
                 "repo_type": "hg",
                 "resource": "hg.mozilla.org",
+                "taskcluster_role_prefix": "repo:hg.mozilla.org/releases/mozilla-beta",
                 "urls": {
                     "https": "https://hg.mozilla.org/releases/mozilla-beta",
                     "ssh": "ssh://hg.mozilla.org/releases/mozilla-beta",
@@ -79,6 +81,7 @@ import mozilla_repo_urls
                 "repo": "releases/mozilla-release",
                 "repo_type": "hg",
                 "resource": "hg.mozilla.org",
+                "taskcluster_role_prefix": "repo:hg.mozilla.org/releases/mozilla-release",  # noqa: E501
                 "urls": {
                     "https": "https://hg.mozilla.org/releases/mozilla-release",
                     "ssh": "ssh://hg.mozilla.org/releases/mozilla-release",
@@ -105,6 +108,7 @@ import mozilla_repo_urls
                 "repo": "try",
                 "repo_type": "hg",
                 "resource": "hg.mozilla.org",
+                "taskcluster_role_prefix": "repo:hg.mozilla.org/try",
                 "urls": {
                     "https": "https://hg.mozilla.org/try",
                     "ssh": "ssh://hg.mozilla.org/try",
@@ -131,6 +135,7 @@ import mozilla_repo_urls
                 "repo": "mozilla-central",
                 "repo_type": "hg",
                 "resource": "hg.mozilla.org",
+                "taskcluster_role_prefix": "repo:hg.mozilla.org/mozilla-central",
                 "urls": {
                     "https": "https://hg.mozilla.org/mozilla-central/raw-file/tip/taskcluster/ci/config.yml",  # noqa: E501
                     "ssh": "ssh://hg.mozilla.org/mozilla-central",
@@ -158,6 +163,7 @@ import mozilla_repo_urls
                 "repo": "mozilla-central",
                 "repo_type": "hg",
                 "resource": "hg.mozilla.org",
+                "taskcluster_role_prefix": "repo:hg.mozilla.org/mozilla-central",
                 "urls": {
                     "https": "https://hg.mozilla.org/mozilla-central/file/tip/taskcluster/ci/config.yml",  # noqa: E501
                     "ssh": "ssh://hg.mozilla.org/mozilla-central",
@@ -186,6 +192,7 @@ import mozilla_repo_urls
                 "repo": "fenix",
                 "repo_type": "git",
                 "resource": "github.com",
+                "taskcluster_role_prefix": "repo:github.com/mozilla-mobile/fenix",
                 "urls": {
                     "git": "git://github.com/mozilla-mobile/fenix.git",
                     "https": "https://github.com/mozilla-mobile/fenix.git",
