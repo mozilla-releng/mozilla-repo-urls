@@ -6,10 +6,6 @@ class RepoUrlParsed(giturlparse.result.GitUrlParsed):
     def hgmo(self) -> bool:
         return self.platform == "hgmo"
 
-
-class GitUrlParsed(RepoUrlParsed):
-    repo_type = "git"
-
-
-class HgUrlParsed(RepoUrlParsed):
-    repo_type = "hg"
+    @property
+    def repo_type(self) -> str:
+        return "hg" if self.platform == "hgmo" else "git"
