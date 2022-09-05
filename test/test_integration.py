@@ -199,9 +199,8 @@ import mozilla_repo_urls
 )
 def test_parse(url_string, expected):
     url_object = mozilla_repo_urls.parse(url_string)
-    for attribute_name, expected_value in expected.items():
-        actual_value = getattr(url_object, attribute_name)
-        assert (
-            actual_value == expected_value
-        ), f"[{url_string}] Property '{attribute_name}' should be "
-        f"'{expected_value}' but is '{actual_value}'"
+    actual = {
+        attribute_name: getattr(url_object, attribute_name)
+        for attribute_name in expected.keys()
+    }
+    assert actual == expected
