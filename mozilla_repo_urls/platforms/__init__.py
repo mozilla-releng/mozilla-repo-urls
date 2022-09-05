@@ -1,8 +1,5 @@
 from .hgmo import HgmoPlatform
 
-HG_PLATFORMS = [
-    # name -> Platform object
+ADDITIONAL_PLATFORMS = [
     ("hgmo", HgmoPlatform()),
-    # TODO
-    # ("base", BasePlatform()),
 ]

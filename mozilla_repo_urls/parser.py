@@ -1,7 +1,11 @@
 import giturlparse
 
-from .platforms import HG_PLATFORMS
+from mozilla_repo_urls.platforms import ADDITIONAL_PLATFORMS
+
 from .result import GitUrlParsed, HgUrlParsed
+
+for i, platform in enumerate(ADDITIONAL_PLATFORMS):
+    giturlparse.platforms.PLATFORMS.insert(i, platform)
 
 
 def parse(url_string):
@@ -15,11 +19,8 @@ def parse(url_string):
 
 
 def _parse_hg(url_string):
-    old_platforms = giturlparse.parser.PLATFORMS
-    giturlparse.parser.PLATFORMS = HG_PLATFORMS
     parsed_info = giturlparse.parser.parse(url_string)
     url_object = HgUrlParsed(parsed_info)
-    giturlparse.parser.PLATFORMS = old_platforms
     return url_object
 
 
