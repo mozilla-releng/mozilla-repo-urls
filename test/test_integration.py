@@ -202,6 +202,36 @@ import mozilla_repo_urls
                 "valid": True,
             },
         ),
+        (
+            "git@github.com:mozilla-mobile/firefox-android.git",
+            {
+                "github": True,
+                "groups": [],
+                "hgmo": False,
+                "host": "github.com",
+                "name": "firefox-android",
+                "normalized": "git@github.com:mozilla-mobile/firefox-android.git",
+                "owner": "mozilla-mobile",
+                "path_raw": "",
+                "path": "",
+                "pathname": "mozilla-mobile/firefox-android.git",
+                "platform": "github",
+                "port": "",
+                "protocol": "ssh",
+                "protocols": [],
+                "repo": "firefox-android",
+                "repo_type": "git",
+                "resource": "github.com",
+                "taskcluster_role_prefix": "repo:github.com/mozilla-mobile/firefox-android",  # noqa: E501
+                "urls": {
+                    "git": "git://github.com/mozilla-mobile/firefox-android.git",
+                    "https": "https://github.com/mozilla-mobile/firefox-android.git",
+                    "ssh": "git@github.com:mozilla-mobile/firefox-android.git",
+                },
+                "user": "git",
+                "valid": True,
+            },
+        ),
     ),
 )
 def test_parse(url_string, expected):
