@@ -1,13 +1,16 @@
+from test import does_not_raise
+
 import pytest
 
 import mozilla_repo_urls
 
 
 @pytest.mark.parametrize(
-    "url_string, expected",
+    "url_string, expectation, expected",
     (
         (
             "https://hg.mozilla.org/mozilla-central",
+            does_not_raise(),
             {
                 "github": False,
                 "groups": [],
@@ -36,6 +39,7 @@ import mozilla_repo_urls
         ),
         (
             "https://hg.mozilla.org/releases/mozilla-beta",
+            does_not_raise(),
             {
                 "github": False,
                 "groups": [],
@@ -64,6 +68,7 @@ import mozilla_repo_urls
         ),
         (
             "https://hg.mozilla.org/releases/mozilla-release",
+            does_not_raise(),
             {
                 "github": False,
                 "groups": [],
@@ -92,6 +97,7 @@ import mozilla_repo_urls
         ),
         (
             "https://hg.mozilla.org/try",
+            does_not_raise(),
             {
                 "groups": [],
                 "hgmo": True,
@@ -119,6 +125,7 @@ import mozilla_repo_urls
         ),
         (
             "https://hg.mozilla.org/mozilla-central/raw-file/tip/taskcluster/ci/config.yml",  # noqa: E501
+            does_not_raise(),
             {
                 "groups": [],
                 "hgmo": True,
@@ -146,6 +153,7 @@ import mozilla_repo_urls
         ),
         (
             "https://hg.mozilla.org/mozilla-central/file/tip/taskcluster/ci/config.yml",  # noqa: E501
+            does_not_raise(),
             {
                 "github": False,
                 "groups": [],
@@ -174,6 +182,7 @@ import mozilla_repo_urls
         ),
         (
             "https://github.com/mozilla-mobile/fenix",
+            does_not_raise(),
             {
                 "github": True,
                 "groups": [],
@@ -204,6 +213,7 @@ import mozilla_repo_urls
         ),
         (
             "git@github.com:mozilla-mobile/firefox-android.git",
+            does_not_raise(),
             {
                 "github": True,
                 "groups": [],
@@ -232,12 +242,18 @@ import mozilla_repo_urls
                 "valid": True,
             },
         ),
+        (
+            "https://some.unknown/repo",
+            pytest.raises(mozilla_repo_urls.InvalidRepoUrlError),
+            None,
+        ),
     ),
 )
-def test_parse(url_string, expected):
-    url_object = mozilla_repo_urls.parse(url_string)
-    actual = {
-        attribute_name: getattr(url_object, attribute_name)
-        for attribute_name in expected.keys()
-    }
-    assert actual == expected
+def test_parse(url_string, expectation, expected):
+    with expectation:
+        url_object = mozilla_repo_urls.parse(url_string)
+        actual = {
+            attribute_name: getattr(url_object, attribute_name)
+            for attribute_name in expected.keys()
+        }
+        assert actual == expected
