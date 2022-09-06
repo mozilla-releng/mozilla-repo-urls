@@ -247,6 +247,11 @@ import mozilla_repo_urls
             pytest.raises(mozilla_repo_urls.InvalidRepoUrlError),
             None,
         ),
+        (
+            "https://gitlab.com/some-owner/some-repo",
+            pytest.raises(mozilla_repo_urls.UnsupportedPlatformError),
+            None,
+        ),
     ),
 )
 def test_parse(url_string, expectation, expected):
