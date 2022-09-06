@@ -8,6 +8,11 @@
 - `parse()` fails automatically if repo platform is neither `hg.mozilla.org` nor `github.com`
 
 
+### Added
+
+- `RepoUrlParsed` exposes `repo_path`.
+
+
 ## [0.0.1] - 2022-09-05
 
 - Initial release
