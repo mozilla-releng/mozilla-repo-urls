@@ -9,6 +9,10 @@ class RepoUrlParsed(giturlparse.result.GitUrlParsed):
         return self.platform == "hgmo"
 
     @property
+    def repo_name(self) -> str:
+        return self.repo_path.split("/")[-1]
+
+    @property
     def repo_path(self) -> str:
         repo_path = (
             self.pathname[: -len(_DOT_GIT_SUFFIX)]
