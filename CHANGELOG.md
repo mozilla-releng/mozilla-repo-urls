@@ -1,6 +1,9 @@
 # Change Log
 
-## [0.0.4] - TBD
+## [0.1.0] - 2022-09-21
+
+### Added
+- Support for git-cinnabar URLs (https://github.com/glandium/git-cinnabar)
 
 ### Fixed
 - `hgmo` SSH URLs can now be parsed
