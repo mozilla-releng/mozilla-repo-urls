@@ -1,5 +1,11 @@
 # Change Log
 
+## [0.0.4] - TBD
+
+### Fixed
+- `hgmo` SSH URLs can now be parsed
+
+
 ## [0.0.3] - 2022-09-09
 
 ### Added

@@ -4,17 +4,17 @@ from giturlparse.platforms.base import BasePlatform
 class HgmoPlatform(BasePlatform):
     PATTERNS = {
         "https": (
-            r"(?P<protocols>(?P<protocol>https))://"
+            r"(?P<protocols>(hg::)?(?P<protocol>https))://"
             r"(?P<domain>[^/]+?)"
             r"(?P<pathname>/"
             r"(?P<repo>(([^/]+?)(/)?){1,2}))"
             r"(?P<path_raw>(/raw-file/|/file/).+)?$"
         ),
         "ssh": (
-            r"(?P<protocols>(?P<protocol>ssh))(://)?"
+            r"(?P<protocols>(hg::)?(?P<protocol>ssh))(://)?"
             r"(?P<domain>.+?)"
-            r"(?P<pathname>(:|/))"
-            r"(?P<repo>(([^/]+?)(/)?){1,2})/?$"
+            r"(?P<pathname>(:|/)"
+            r"(?P<repo>(([^/]+?)(/)?){1,2}))/?$"
         ),
     }
     FORMATS = {
@@ -27,7 +27,7 @@ class HgmoPlatform(BasePlatform):
     @staticmethod
     def clean_data(data):
         data = BasePlatform.clean_data(data)
-        if data["path_raw"].startswith(("/raw-file/", "/file")):
+        if "path_raw" in data and data["path_raw"].startswith(("/raw-file/", "/file")):
             data["path"] = (
                 data["path_raw"].replace("/raw-file/", "").replace("/file/", "")
             )
