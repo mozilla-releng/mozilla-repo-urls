@@ -8,8 +8,13 @@ class InvalidRepoUrlError(RepoUrlsBaseError):
 
 
 class UnsupportedPlatformError(RepoUrlsBaseError):
+    @property
+    def supported_platforms(self):
+        return list(self._supported_platforms)
+
     def __init__(self, url_string, platform, supported_platforms) -> None:
+        self._supported_platforms = supported_platforms
         super().__init__(
-            f"Unsupported platform. Got: {platform}. "
-            f"Expected: {supported_platforms}. URL: {url_string}"
+            f"Unsupported version control host. Got: {platform}. "
+            f"Expected one of: {supported_platforms}. URL: {url_string}"
         )
