@@ -26,11 +26,17 @@ def parse(url_string):
         For error reporting purposes, the exception object includes the domain
         for each supported platform.
         """
-        raise UnsupportedPlatformError(url_string, parsed_url.host,
-                                       [domain
-                                        for domains in
-                                          [platform[1].DOMAINS
-                                           for platform in giturlparse.platforms.PLATFORMS
-                                           if platform[0] in _SUPPORTED_PLATFORMS]
-                                        for domain in domains])
+        raise UnsupportedPlatformError(
+            url_string,
+            parsed_url.host,
+            [
+                domain
+                for domains in [
+                    platform[1].DOMAINS
+                    for platform in giturlparse.platforms.PLATFORMS
+                    if platform[0] in _SUPPORTED_PLATFORMS
+                ]
+                for domain in domains
+            ],
+        )
     return parsed_url
