@@ -9,7 +9,7 @@ for i, platform in enumerate(ADDITIONAL_PLATFORMS):
     giturlparse.platforms.PLATFORMS.insert(i, platform)
 
 
-_SUPPORTED_PLATFORMS = ("hgmo", "github")
+SUPPORTED_HOSTS = ("hgmo", "github")
 
 
 def parse(url_string):
@@ -21,7 +21,7 @@ def parse(url_string):
     if not parsed_url.valid:
         raise InvalidRepoUrlError(url_string)
 
-    if parsed_url.platform not in _SUPPORTED_PLATFORMS:
+    if parsed_url.platform not in SUPPORTED_HOSTS:
         """
         For error reporting purposes, the exception object includes the domain
         for each supported platform.
@@ -34,7 +34,7 @@ def parse(url_string):
                 for domains in [
                     platform[1].DOMAINS
                     for platform in giturlparse.platforms.PLATFORMS
-                    if platform[0] in _SUPPORTED_PLATFORMS
+                    if platform[0] in SUPPORTED_HOSTS
                 ]
                 for domain in domains
             ],
