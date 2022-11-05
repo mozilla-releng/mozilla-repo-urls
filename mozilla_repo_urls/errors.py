@@ -15,6 +15,6 @@ class UnsupportedPlatformError(RepoUrlsBaseError):
     def __init__(self, url_string, platform, supported_platforms) -> None:
         self._supported_platforms = supported_platforms
         super().__init__(
-            f"Unsupported version control host. Got: {platform}. "
+            f"Unsupported version control host. Got: {host}. "
             f"Expected one of: {supported_platforms}. URL: {url_string}"
         )
