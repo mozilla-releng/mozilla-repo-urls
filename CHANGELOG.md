@@ -1,5 +1,10 @@
 # Change Log
 
+## [0.1.1] - 2022-11-08
+
+### Changed
+- Improve error message for unsupported VCS platform
+
 ## [0.1.0] - 2022-09-21
 
 ### Added
