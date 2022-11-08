@@ -36,7 +36,7 @@ def parse(url_string):
     if not parsed_url.valid:
         raise InvalidRepoUrlError(url_string)
 
-    if parsed_url.platform not in SUPPORTED_HOSTS:
+    if parsed_url.host not in SUPPORTED_HOSTS:
         # For error reporting purposes, the exception object includes the domain
         # for each supported platform.
         raise UnsupportedPlatformError(url_string, parsed_url.host, SUPPORTED_HOSTS)
