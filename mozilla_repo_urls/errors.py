@@ -9,7 +9,6 @@ class InvalidRepoUrlError(RepoUrlsBaseError):
 
 class UnsupportedPlatformError(RepoUrlsBaseError):
     def __init__(self, url_string, host, supported_hosts) -> None:
-        self.supported_hosts = supported_hosts
         super().__init__(
             f"Unsupported version control host. Got: {host}. "
             f"Expected one of: {supported_hosts}. URL: {url_string}"
