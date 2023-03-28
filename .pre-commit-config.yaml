@@ -37,12 +37,12 @@ repos:
   hooks:
   - id: flake8
 - repo: https://github.com/adrienverge/yamllint
-  rev: v1.29.0
+  rev: v1.30.0
   hooks:
   - id: yamllint
     args: [--strict]
 - repo: https://github.com/ikamensh/flynt
-  rev: "0.77"
+  rev: "0.78"
   hooks:
   - id: flynt
 - repo: https://github.com/codespell-project/codespell
