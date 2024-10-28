@@ -3,7 +3,7 @@
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.6.0
+  rev: v5.0.0
   hooks:
   - id: check-added-large-files
   - id: check-ast
@@ -20,11 +20,11 @@ repos:
   - id: trailing-whitespace
     args: [--markdown-linebreak-ext=md]
 - repo: https://github.com/psf/black
-  rev: 24.8.0
+  rev: 24.10.0
   hooks:
   - id: black
 - repo: https://github.com/asottile/pyupgrade
-  rev: v3.17.0
+  rev: v3.19.0
   hooks:
   - id: pyupgrade
     args: [--py36-plus]
@@ -50,7 +50,7 @@ repos:
   hooks:
   - id: codespell
 - repo: https://github.com/compilerla/conventional-pre-commit
-  rev: v3.4.0
+  rev: v3.6.0
   hooks:
   - id: conventional-pre-commit
     stages: [commit-msg]
