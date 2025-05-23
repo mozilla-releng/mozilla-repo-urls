@@ -40,6 +40,7 @@ repos:
   rev: v1.37.1
   hooks:
   - id: yamllint
+    args: [--strict]
 - repo: https://github.com/ikamensh/flynt
   rev: "1.0.1"
   hooks:
