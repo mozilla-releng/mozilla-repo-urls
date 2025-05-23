@@ -472,7 +472,7 @@ import mozilla_repo_urls
             },
         ),
         (
-            "https://some.unknown/repo",
+            "https:/github.com/some-owner/some-repo",
             pytest.raises(mozilla_repo_urls.InvalidRepoUrlError),
             None,
         ),

@@ -1,0 +1,20 @@
+---
+name: Run python tests
+on: ["push", "pull_request"]  # yamllint disable-line rule:truthy
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        strategy:
+            fail-fast: false
+            matrix:
+                python-version: ["py311", "py312", "py313"]
+
+        steps:
+        - uses: actions/checkout@v3
+        - name: Set up Python ${{ matrix.python-version }}
+          uses: astral-sh/setup-uv@v5
+        - name: Install tox
+          run: uv tool install tox --with tox-uv
+        - name: run tests
+          run: uv tool run tox -e ${{ matrix.python-version }}

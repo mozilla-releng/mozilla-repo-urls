@@ -1,6 +1,37 @@
+[project]
+name = "mozilla-repo-urls"
+version = "0.1.1"
+description="Process Mozilla's repository URLs. The intent is to centralize URLs parsing."
+url = "https://github.com/mozilla-releng/mozilla-repo-urls"
+license = "MPL-2.0"
+readme = "README.md"
+authors = [
+    { name = "Mozilla Release Engineering", email = "release+python@mozilla.com" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+requires-python = ">=3.11"
+dependencies = [
+    "giturlparse>=0.10.0"
+]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest",
+    "pytest-cov",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [tool.black]
 line-length = 88
-target-version = ["py39"]
+target-version = ["py313"]
 
 [tool.isort]
 force_grid_wrap = 0
