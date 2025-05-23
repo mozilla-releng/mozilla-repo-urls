@@ -33,3 +33,6 @@ class RepoUrlParsed(giturlparse.result.GitUrlParsed):
     @property
     def taskcluster_role_prefix(self) -> str:
         return f"repo:{self.host}/{self.repo_path}"
+
+    def __eq__(self, other):
+        return self.normalized == other.normalized
