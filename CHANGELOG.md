@@ -1,5 +1,15 @@
 # Change Log
 
+## [0.2.0] - 2025-05-26
+
+## Added
+
+- Added support for comparing equality of parsed URLs
+
+## Changed
+
+- Dropped support for python 3.6-3.10, added support for python 3.11-3.13
+
 ## [0.1.1] - 2022-11-08
 
 ### Changed

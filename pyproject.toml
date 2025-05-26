@@ -1,6 +1,6 @@
 [project]
 name = "mozilla-repo-urls"
-version = "0.1.1"
+version = "0.2.0"
 description="Process Mozilla's repository URLs. The intent is to centralize URLs parsing."
 url = "https://github.com/mozilla-releng/mozilla-repo-urls"
 license = "MPL-2.0"
