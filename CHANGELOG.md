@@ -1,5 +1,11 @@
 # Change Log
 
+## [0.2.1] - 2025-05-26
+
+## Fixed
+
+- Fixed parsed URL equality when comparing to other types. It'll now return false instead of raising exceptions
+
 ## [0.2.0] - 2025-05-26
 
 ## Added
