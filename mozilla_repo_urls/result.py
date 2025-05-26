@@ -35,4 +35,7 @@ class RepoUrlParsed(giturlparse.result.GitUrlParsed):
         return f"repo:{self.host}/{self.repo_path}"
 
     def __eq__(self, other):
-        return self.normalized == other.normalized
+        if isinstance(other, RepoUrlParsed):
+            return self.normalized == other.normalized
+
+        return False
