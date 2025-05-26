@@ -10,8 +10,10 @@ Process Mozilla's repository URLs. The intent is to centralize URLs parsing.
 ## Preparing a release
 
 1. Change the version in pyproject.toml
+1. Update the changelog file
 1. Once the change is merged, `uv tool run hatch build`
-1. ```
+1. Run the following:
+```
 export VERSION=$(sed -n "s/version = \"\(.*\)\"/\\1/p" pyproject.toml)
 git tag -s ${VERSION} -m ${VERSION}
 git push origin ${VERSION}
