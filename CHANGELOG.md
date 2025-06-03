@@ -1,5 +1,11 @@
 # Change Log
 
+## [0.2.2] - 2025-06-03
+
+## Added
+
+- Added a `repo_url` property to the parsing result which retusn the normalized base repository URL for hg and github.
+
 ## [0.2.1] - 2025-05-26
 
 ## Fixed
