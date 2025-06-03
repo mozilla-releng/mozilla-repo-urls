@@ -30,6 +30,7 @@ import mozilla_repo_urls
                 "repo_name": "mozilla-central",
                 "repo_path": "mozilla-central",
                 "repo_type": "hg",
+                "repo_url": "https://hg.mozilla.org/mozilla-central",
                 "resource": "hg.mozilla.org",
                 "taskcluster_role_prefix": "repo:hg.mozilla.org/mozilla-central",
                 "urls": {
@@ -63,6 +64,7 @@ import mozilla_repo_urls
                 "repo_name": "mozilla-beta",
                 "repo_path": "releases/mozilla-beta",
                 "repo_type": "hg",
+                "repo_url": "https://hg.mozilla.org/releases/mozilla-beta",
                 "resource": "hg.mozilla.org",
                 "taskcluster_role_prefix": "repo:hg.mozilla.org/releases/mozilla-beta",
                 "urls": {
@@ -96,6 +98,7 @@ import mozilla_repo_urls
                 "repo_name": "mozilla-release",
                 "repo_path": "releases/mozilla-release",
                 "repo_type": "hg",
+                "repo_url": "https://hg.mozilla.org/releases/mozilla-release",
                 "resource": "hg.mozilla.org",
                 "taskcluster_role_prefix": "repo:hg.mozilla.org/releases/mozilla-release",  # noqa: E501
                 "urls": {
@@ -129,6 +132,7 @@ import mozilla_repo_urls
                 "repo_name": "try",
                 "repo_path": "try",
                 "repo_type": "hg",
+                "repo_url": "https://hg.mozilla.org/try",
                 "resource": "hg.mozilla.org",
                 "taskcluster_role_prefix": "repo:hg.mozilla.org/try",
                 "urls": {
@@ -162,6 +166,7 @@ import mozilla_repo_urls
                 "repo_name": "mozilla-central",
                 "repo_path": "mozilla-central",
                 "repo_type": "hg",
+                "repo_url": "https://hg.mozilla.org/mozilla-central",
                 "resource": "hg.mozilla.org",
                 "taskcluster_role_prefix": "repo:hg.mozilla.org/mozilla-central",
                 "urls": {
@@ -195,6 +200,7 @@ import mozilla_repo_urls
                 "repo_name": "mozilla-central",
                 "repo_path": "mozilla-central",
                 "repo_type": "hg",
+                "repo_url": "https://hg.mozilla.org/mozilla-central",
                 "resource": "hg.mozilla.org",
                 "taskcluster_role_prefix": "repo:hg.mozilla.org/mozilla-central",
                 "urls": {
@@ -229,6 +235,7 @@ import mozilla_repo_urls
                 "repo_name": "fenix",
                 "repo_path": "mozilla-mobile/fenix",
                 "repo_type": "git",
+                "repo_url": "https://github.com/mozilla-mobile/fenix",
                 "resource": "github.com",
                 "taskcluster_role_prefix": "repo:github.com/mozilla-mobile/fenix",
                 "urls": {
@@ -263,6 +270,7 @@ import mozilla_repo_urls
                 "repo_name": "firefox-android",
                 "repo_path": "mozilla-mobile/firefox-android",
                 "repo_type": "git",
+                "repo_url": "https://github.com/mozilla-mobile/firefox-android",
                 "resource": "github.com",
                 "taskcluster_role_prefix": "repo:github.com/mozilla-mobile/firefox-android",  # noqa: E501
                 "urls": {
@@ -295,6 +303,7 @@ import mozilla_repo_urls
                 "repo_name": "mozilla-unified",
                 "repo_path": "mozilla-unified",
                 "repo_type": "hg",
+                "repo_url": "https://hg.mozilla.org/mozilla-unified",
                 "resource": "hg.mozilla.org",
                 "taskcluster_role_prefix": "repo:hg.mozilla.org/mozilla-unified",
                 "urls": {
@@ -328,6 +337,7 @@ import mozilla_repo_urls
                 "repo_name": "mozilla-unified",
                 "repo_path": "mozilla-unified",
                 "repo_type": "git",
+                "repo_url": "https://hg.mozilla.org/mozilla-unified",
                 "resource": "hg.mozilla.org",
                 "taskcluster_role_prefix": "repo:hg.mozilla.org/mozilla-unified",
                 "urls": {
@@ -361,6 +371,7 @@ import mozilla_repo_urls
                 "repo_name": "mozilla-unified",
                 "repo_path": "mozilla-unified",
                 "repo_type": "git",
+                "repo_url": "https://hg.mozilla.org/mozilla-unified",
                 "resource": "hg.mozilla.org",
                 "taskcluster_role_prefix": "repo:hg.mozilla.org/mozilla-unified",
                 "urls": {
@@ -394,6 +405,7 @@ import mozilla_repo_urls
                 "repo_name": "mozilla-central",
                 "repo_path": "mozilla-central",
                 "repo_type": "git",
+                "repo_url": "https://hg.mozilla.org/mozilla-central",
                 "resource": "hg.mozilla.org",
                 "taskcluster_role_prefix": "repo:hg.mozilla.org/mozilla-central",
                 "urls": {
@@ -427,6 +439,7 @@ import mozilla_repo_urls
                 "repo_name": "mozilla-central",
                 "repo_path": "mozilla-central",
                 "repo_type": "git",
+                "repo_url": "https://hg.mozilla.org/mozilla-central",
                 "resource": "hg.mozilla.org",
                 "taskcluster_role_prefix": "repo:hg.mozilla.org/mozilla-central",
                 "urls": {
@@ -460,6 +473,7 @@ import mozilla_repo_urls
                 "repo_name": "mozilla-central",
                 "repo_path": "mozilla-central",
                 "repo_type": "git",
+                "repo_url": "https://hg.mozilla.org/mozilla-central",
                 "resource": "hg.mozilla.org",
                 "taskcluster_role_prefix": "repo:hg.mozilla.org/mozilla-central",
                 "urls": {
