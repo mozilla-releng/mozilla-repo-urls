@@ -27,6 +27,13 @@ class RepoUrlParsed(giturlparse.result.GitUrlParsed):
         return repo_path.strip("/")
 
     @property
+    def repo_url(self) -> str:
+        if self.platform == "hgmo":
+            return f"https://hg.mozilla.org/{self.repo}"
+        else:
+            return f"https://github.com/{self.owner}/{self.repo}"
+
+    @property
     def repo_type(self) -> str:
         return "hg" if self.platform == "hgmo" and not self.git_cinnabar else "git"
 
